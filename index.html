@@ -12,16 +12,15 @@
   }
 
 body {
-  margin: 0;
-  padding: 0;
+  /* This ensures the gradient stretches the full height of the window */
+  background: radial-gradient(circle at center, #ffffff 0%, #e8e8e8 100%);
+  background-attachment: fixed; /* Keeps the gradient centered if you scroll */
+  
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  /* The subtle spotlight effect */
-  background: radial-gradient(circle, #ffffff 0%, #f4f4f4 100%);
-  color: var(--text-main);
+  color: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
