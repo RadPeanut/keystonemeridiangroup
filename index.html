@@ -34,12 +34,6 @@ body {
   overflow: hidden;
 }
 
-.container {
-  max-width: 600px;
-  padding: 20px;
-  animation: smoothRise 1.5s ease-out;
-}
-
 @keyframes smoothRise {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -103,14 +97,22 @@ h1 {
   border-bottom: 1px solid #ffffff;
 }
 
+.container {
+  max-width: 600px;
+  padding: 20px;
+  position: relative; /* This is the anchor for the line */
+  animation: smoothRise 1.5s ease-out;
+}
+
+/* The Vertical Meridian Line */
 .container::before {
   content: '';
   position: absolute;
-  top: -100px;
+  top: -60px; /* Sits above the logo */
   left: 50%;
   width: 1px;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+  height: 40px; /* A short, sharp "needle" */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.6));
   transform: translateX(-50%);
 }
   </style>
