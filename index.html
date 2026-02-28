@@ -11,30 +11,40 @@
   --accent: #101820; /* Deep charcoal for a premium feel */
   }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  /* This ensures the gradient stretches the full height of the window */
-  background: radial-gradient(circle at center, #ffffff 0%, #e8e8e8 100%);
-  background-attachment: fixed; /* Keeps the gradient centered if you scroll */
-  
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  color: #1a1a1a;
+  /* 2. Centering Logic */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  
+  /* 3. The Gradient (Adjusted to be more visible) */
+  background: radial-gradient(circle at center, #ffffff 0%, #e5e5e5 100%);
+  background-attachment: fixed;
+  
+  /* 4. Typography & Cleanup */
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden; /* Prevents accidental scrollbars on a single-page layout */
 }
 
 .container {
   max-width: 600px;
-  padding: 40px 20px;
-  /* Entrance animation */
-  opacity: 0;
-  transform: translateY(15px);
-  animation: smoothRise 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  padding: 20px;
+  /* Smooth entry animation */
+  animation: fadeIn 1.2s ease-out;
 }
 
-@keyframes smoothRise {
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
