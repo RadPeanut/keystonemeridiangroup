@@ -73,8 +73,12 @@ h1 {
 }
 
 .info-block {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.03); /* Extremely subtle glass tint */
+  backdrop-filter: blur(10px); /* Blurs the gradient behind it slightly */
+  border-radius: 12px;
+  margin-top: 20px;
 }
 
 .location {
@@ -97,6 +101,17 @@ h1 {
 .contact a:hover {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+  transform: translateX(-50%);
 }
   </style>
 </head>
