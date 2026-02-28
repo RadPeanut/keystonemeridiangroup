@@ -18,22 +18,22 @@ html, body {
 }
 
 body {
-  /* 2. Centering Logic */
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center;     /* Center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  /* This version uses a 'tight' center. 
+     The white only stays pure until 20% of the way out, 
+     then aggressively fades to a visible grey (#d4d4d4) */
+  background: radial-gradient(circle at center, #ffffff 0%, #ffffff 20%, #d4d4d4 100%);
   
-  /* 3. The Gradient (Adjusted to be more visible) */
-  background: radial-gradient(circle at center, #ffffff 0%, #cccccc 100%);
   background-attachment: fixed;
-  
-  /* 4. Typography & Cleanup */
-  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   color: #1a1a1a;
   text-align: center;
-  -webkit-font-smoothing: antialiased;
-  overflow: hidden; /* Prevents accidental scrollbars on a single-page layout */
 }
 
 .container {
