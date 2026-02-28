@@ -101,6 +101,38 @@ h1 {
         margin-bottom: 60px;
       }
     }
+
+    .legal-footer {
+      position: absolute;
+      bottom: 24px;
+      width: 100%;
+      text-align: center;
+      font-size: 10px; /* Small enough to be discrete */
+      letter-spacing: 1px;
+    color: #475569; /* Muted slate grey */
+    text-transform: uppercase;
+  }
+
+  .legal-footer a {
+    color: #475569;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .legal-footer a:hover {
+    color: #94a3b8;
+  }
+
+/* Ensure the legal footer doesn't overlap content on very short screens */
+@media (max-height: 500px) {
+  .legal-footer {
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+    
 </style>
 
 <body>
